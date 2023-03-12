@@ -12,6 +12,10 @@ body {
     border-radius: 1%;
 }
 
+.underlined {
+    border-bottom: 1px solid grey;
+}
+
 .accordion-container input {
     display: none;
 }
@@ -24,16 +28,21 @@ body {
     height: 7vh;
     font-size: 3em;
     font-family: 'Amatic SC', cursive;
-    transition: all 0.1s ease-in-out;
+    transition: height 0.2s;
     cursor: pointer;
 }
 
-.underlined {
-    border-bottom: 1px solid grey;
+.accordion-container .picture {
+    width: 98%;
+    transition: width 0.5s;
 }
 
 .accordion-container label:hover {
     height: calc(100% - 7vh);
+}
+
+.accordion-container label:hover .picture {
+    width: 100%;
 }
 
 .accordion-container input:checked ~ label {
@@ -49,10 +58,6 @@ body {
     display: block;
     width: 65%;
     margin: 3vh auto;
-}
-
-.picture:not(input:checked + .picture) {
-    width: 100%;
 }
 
 .label_name {
